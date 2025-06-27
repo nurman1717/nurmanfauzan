@@ -1,0 +1,606 @@
+/* General Styling */
+:root {
+    /* Palet Warna Baru yang Lebih Keren */
+    --primary-color: #FF7043;   /* Oranye/Coral Cerah - Memberi Energi */
+    --primary-dark: #E65100;    /* Oranye Lebih Gelap untuk Hover */
+    --accent-color: #26A69A;    /* Teal/Turquoise - Warna Aksen yang Menyegarkan */
+    --dark-bg: #2C3E50;         /* Biru Tua (Navy/Charcoal) - Elegan dan Profesional */
+    --light-text: #ECF0F1;      /* Abu-abu Sangat Terang - Kontras dengan Dark BG */
+    --section-bg-light: #F4F6F9; /* Abu-abu Sangat Terang untuk Bagian */
+    --white-color: #ffffff;
+    --text-color: #34495E;      /* Abu-abu Kebiruan untuk Teks Umum */
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Shadow Lebih Halus */
+    --shadow-medium: rgba(0, 0, 0, 0.2); /* Shadow Untuk Hover */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Font body yang bersih */
+    line-height: 1.7; /* Line height sedikit lebih lega */
+    color: var(--text-color);
+    background-color: var(--section-bg-light); /* Background body lebih terang */
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 25px; /* Padding lebih banyak di samping */
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 14px 32px; /* Padding tombol lebih besar lagi */
+    border-radius: 50px; /* Tombol lebih bulat */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.8px; /* Spasi huruf sedikit lebih lebar */
+    text-transform: uppercase; /* Huruf besar semua */
+    box-shadow: 0 6px 15px var(--shadow-light);
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px); /* Naik sedikit lebih tinggi */
+    box-shadow: 0 10px 25px var(--shadow-medium);
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Font Poppins untuk judul */
+    margin-bottom: 20px;
+    color: var(--dark-bg); /* Judul menggunakan warna background gelap */
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px; /* Jarak bawah judul lebih besar */
+    position: relative;
+    padding-bottom: 15px; /* Padding bawah garis */
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px; /* Garis lebih lebar */
+    height: 5px; /* Garis lebih tebal */
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--dark-bg); /* Header menggunakan warna biru tua */
+    color: var(--light-text);
+    padding: 1.5rem 0; /* Padding header lebih besar */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px var(--shadow-medium);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+nav .logo h1 {
+    font-size: 2.2rem; /* Ukuran logo sedikit lebih besar */
+    margin: 0;
+    color: var(--primary-color); /* Warna logo tetap oranye cerah */
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 35px; /* Jarak antar link lebih besar */
+}
+
+.nav-links a {
+    color: var(--light-text); /* Warna link navigasi terang */
+    font-weight: 600;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px; /* Garis bawah link lebih tebal */
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Burger Menu for Mobile */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 30px; /* Burger lebih besar */
+    height: 4px; /* Burger lebih tebal */
+    background-color: var(--primary-color); /* Warna burger oranye */
+    margin: 7px; /* Jarak antar garis */
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    /* Ganti URL gambar dengan gambar yang relevan dan resolusi tinggi */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1596541223946-b51684c98ac9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    color: var(--white-color);
+    text-align: center;
+    padding: 150px 20px; /* Padding hero lebih besar */
+    min-height: 80vh; /* Minimum tinggi hero lebih tinggi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero-content h2 {
+    font-size: 4rem; /* Ukuran judul hero sangat besar */
+    margin-bottom: 30px;
+    line-height: 1.1;
+    color: var(--white-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4); /* Tambah shadow pada teks */
+}
+
+.hero-content h2::after {
+    background-color: var(--primary-color); /* Garis bawah judul hero oranye */
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Ukuran paragraf hero lebih besar */
+    margin-bottom: 50px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Sections */
+section {
+    padding: 90px 0; /* Padding section lebih besar */
+    text-align: center;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--section-bg-light);
+}
+
+/* Services Section */
+.services .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px; /* Jarak antar item lebih besar */
+    margin-top: 60px;
+}
+
+.services .service-item {
+    background: var(--white-color);
+    padding: 40px; /* Padding item servis lebih besar */
+    border-radius: 12px; /* Border radius lebih lembut */
+    box-shadow: 0 10px 30px var(--shadow-light); /* Shadow lebih menonjol */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-top: 6px solid var(--primary-color); /* Garis atas lebih tebal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services .service-item:hover {
+    transform: translateY(-15px); /* Naik sedikit lebih tinggi */
+    box-shadow: 0 15px 40px var(--shadow-medium);
+}
+
+.services .service-item i {
+    font-size: 4rem; /* Ukuran ikon sangat besar */
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.services .service-item h3 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+    color: var(--dark-bg);
+}
+
+.services .service-item p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* About Section */
+.about {
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto 25px auto;
+    line-height: 1.9;
+    color: var(--text-color);
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 750px; /* Form lebih lebar */
+    margin: 50px auto;
+    background: var(--white-color);
+    padding: 50px; /* Padding form lebih besar */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px var(--shadow-light);
+    text-align: left;
+}
+
+.contact-form .form-group {
+    margin-bottom: 30px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--dark-bg);
+    font-size: 1.1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 16px; /* Padding input lebih besar */
+    border: 1px solid #D1D8E0; /* Border lebih halus */
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    background-color: var(--section-bg-light); /* Background input sedikit gelap */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(255, 112, 67, 0.3); /* Focus outline oranye */
+    outline: none;
+    background-color: var(--white-color); /* Background input kembali putih saat fokus */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px; /* Tinggi minimal textarea lebih besar */
+}
+
+.contact-info {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--dark-bg);
+}
+
+.contact-info p {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+.contact-info i {
+    margin-right: 15px;
+    color: var(--primary-color);
+    font-size: 1.6rem; /* Ukuran ikon kontak lebih besar */
+}
+
+/* Footer */
+footer {
+    background: var(--dark-bg);
+    color: var(--light-text);
+    text-align: center;
+    padding: 35px 0; /* Padding footer lebih besar */
+    margin-top: 60px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* --- Styling untuk Halaman Hosting Gratis --- */
+.hosting-materi {
+    padding-top: 50px; /* Sesuaikan padding atas agar tidak terlalu dekat header */
+    padding-bottom: 80px;
+    text-align: left; /* Teks materi lebih baik rata kiri */
+}
+
+.hosting-materi h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hosting-materi .intro-text {
+    font-size: 1.15rem;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.materi-section {
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--shadow-light);
+    margin-bottom: 40px;
+    border-left: 6px solid var(--accent-color); /* Garis aksen di kiri */
+}
+
+.materi-section h3 {
+    font-size: 2.2rem;
+    color: var(--dark-bg);
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.materi-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.materi-section h4 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.materi-section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.materi-section ul, .materi-section ol {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.materi-section ul li, .materi-section ol li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: flex-start;
+}
+
+.materi-section ul li i, .materi-section ol li i {
+    margin-right: 10px;
+    color: var(--primary-color); /* Ikon check/times berwarna primer */
+    font-size: 1.2rem;
+    margin-top: 3px; /* Penyesuaian vertikal ikon */
+}
+
+.materi-section ul li .fa-times-circle {
+    color: #dc3545; /* Warna merah untuk ikon silang */
+}
+
+.materi-section .note {
+    background-color: #fff3cd; /* Warna kuning lembut untuk catatan */
+    border-left: 5px solid #ffc107; /* Border kuning lebih gelap */
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #856404;
+    display: flex;
+    align-items: flex-start;
+}
+
+.materi-section .note i {
+    color: #ffc107;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Styling untuk link aktif di navigasi */
+.nav-links .active {
+    color: var(--primary-color) !important; /* Warna oranye untuk link aktif */
+}
+
+.nav-links .active::after {
+    width: 100% !important; /* Garis bawah penuh untuk link aktif */
+    background-color: var(--primary-color) !important;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    h2::after {
+        width: 60px;
+        height: 4px;
+    }
+
+    .hero-content h2 {
+        font-size: 3.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        height: 90vh; /* Sesuaikan dengan tinggi header baru */
+        top: 10vh;
+        width: 75%;
+    }
+
+    .nav-links li {
+        margin: 30px 0;
+    }
+
+    .nav-links li a {
+        font-size: 1.4rem;
+    }
+
+    .burger div {
+        width: 28px;
+        height: 3px;
+        margin: 6px;
+    }
+
+    .services .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services .service-item {
+        padding: 30px;
+    }
+
+    .services .service-item i {
+        font-size: 3.5rem;
+    }
+
+    .services .service-item h3 {
+        font-size: 1.7rem;
+    }
+
+    .about p {
+        font-size: 1.1rem;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
+
+    .contact-form label {
+        font-size: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    .contact-info p {
+        font-size: 1.05rem;
+    }
+
+    .contact-info i {
+        font-size: 1.3rem;
+    }
+
+    /* Responsive adjustment for hosting page */
+    .hosting-materi h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .materi-section {
+        padding: 25px;
+    }
+
+    .materi-section h3 {
+        font-size: 1.8rem;
+    }
+
+    .materi-section h4 {
+        font-size: 1.3rem;
+    }
+
+    .materi-section p,
+    .materi-section ul li,
+    .materi-section ol li {
+        font-size: 0.95rem;
+    }
+
+    .materi-section ul li i, .materi-section ol li i {
+        font-size: 1rem;
+    }
+}
+
+
+/* Keyframes for nav link animation */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

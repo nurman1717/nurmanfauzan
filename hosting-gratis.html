@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Hosting Website Gratis - ServisKomputer.ID</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>ServisKomputer.ID</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Beranda</a></li>
+                <li><a href="index.html#services">Layanan</a></li>
+                <li><a href="index.html#about">Tentang Kami</a></li>
+                <li><a href="index.html#contact">Kontak</a></li>
+                <li><a href="hosting-gratis.html" class="active">Hosting Gratis</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hosting-materi" class="hosting-materi">
+            <div class="container">
+                <h2>Cara Hosting Website Gratis</h2>
+                <p class="intro-text">Membangun website sudah selesai, sekarang saatnya mempublikasikannya agar bisa diakses oleh banyak orang. Jika Anda mencari solusi hosting tanpa biaya, ada beberapa opsi penyedia hosting gratis yang bisa dipertimbangkan. Namun, penting untuk memahami kelebihan dan kekurangannya.</p>
+
+                <div class="materi-section">
+                    <h3>1. GitHub Pages</h3>
+                    <p>GitHub Pages adalah salah satu cara terbaik untuk menghosting website statis (HTML, CSS, JavaScript murni) secara gratis. Ini sangat populer di kalangan developer karena terintegrasi langsung dengan repositori GitHub Anda.</p>
+                    <h4>Kelebihan:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Sangat mudah digunakan jika Anda sudah familiar dengan Git/GitHub.</li>
+                        <li><i class="fas fa-check-circle"></i> Mendukung custom domain.</li>
+                        <li><i class="fas fa-check-circle"></i> Cepat dan andal karena didukung oleh infrastruktur GitHub.</li>
+                        <li><i class="fas fa-check-circle"></i> Ideal untuk portofolio, blog, atau proyek pribadi.</li>
+                    </ul>
+                    <h4>Kekurangan:</h4>
+                    <ul>
+                        <li><i class="fas fa-times-circle"></i> Hanya untuk website statis (tidak mendukung PHP, database, dll.).</li>
+                        <li><i class="fas fa-times-circle"></i> Batasan bandwidth dan ukuran repositori (meskipun cukup besar untuk sebagian besar proyek gratis).</li>
+                    </ul>
+                    <h4>Cara Menggunakan:</h4>
+                    <ol>
+                        <li>Buat repositori baru di GitHub dengan nama <code>username.github.io</code> (ganti <code>username</code> dengan username GitHub Anda).</li>
+                        <li>Unggah file website Anda (<code>index.html</code>, <code>style.css</code>, <code>script.js</code>, dll.) ke repositori tersebut.</li>
+                        <li>Website Anda akan otomatis tersedia di <code>https://username.github.io</code>.</li>
+                        <li>Untuk proyek lain, Anda bisa membuat branch bernama <code>gh-pages</code> di repositori proyek tersebut.</li>
+                    </ol>
+                    <p class="note"><i class="fas fa-info-circle"></i> **Catatan:** GitHub Pages sangat direkomendasikan untuk website yang Anda buat ini karena sifatnya statis.</p>
+                </div>
+
+                <div class="materi-section">
+                    <h3>2. Netlify</h3>
+                    <p>Netlify adalah platform modern yang sangat populer untuk menghosting website statis dan aplikasi web JAMstack. Mereka menawarkan paket gratis yang sangat murah hati.</p>
+                    <h4>Kelebihan:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Deployment super cepat dari Git (GitHub, GitLab, Bitbucket).</li>
+                        <li><i class="fas fa-check-circle"></i> Mendukung custom domain dan HTTPS gratis.</li>
+                        <li><i class="fas fa-check-circle"></i> Fitur tambahan seperti form handling, serverless functions (untuk kebutuhan tertentu).</li>
+                        <li><i class="fas fa-check-circle"></i> CDN global untuk kecepatan akses yang baik.</li>
+                    </ul>
+                    <h4>Kekurangan:</h4>
+                    <ul>
+                        <li><i class="fas fa-times-circle"></i> Fitur advance mungkin memerlukan upgrade ke paket berbayar.</li>
+                        <li><i class="fas fa-times-circle"></i> Tidak cocok untuk aplikasi yang membutuhkan backend server tradisional.</li>
+                    </ul>
+                    <h4>Cara Menggunakan:</h4>
+                    <ol>
+                        <li>Daftar akun di Netlify.com.</li>
+                        <li>Hubungkan dengan repositori Git Anda.</li>
+                        <li>Pilih repositori website Anda, dan Netlify akan otomatis mendeteksi konfigurasi build (jika ada) dan mendeploy website Anda.</li>
+                    </ol>
+                </div>
+
+                <div class="materi-section">
+                    <h3>3. Vercel</h3>
+                    <p>Mirip dengan Netlify, Vercel adalah platform untuk deployment instan dan hosting website statis serta aplikasi frontend. Sangat populer di kalangan developer React, Next.js, dan lainnya.</p>
+                    <h4>Kelebihan:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Deployment sangat cepat dan mudah dari Git.</li>
+                        <li><i class="fas fa-check-circle"></i> Mendukung custom domain dan SSL gratis.</li>
+                        <li><i class="fas fa-check-circle"></i> Fitur preview deployment untuk setiap pull request.</li>
+                    </ul>
+                    <h4>Kekurangan:</h4>
+                    <ul>
+                        <li><i class="fas fa-times-circle"></i> Fokus utama pada frontend dan website statis.</li>
+                    </ul>
+                    <h4>Cara Menggunakan:</h4>
+                    <ol>
+                        <li>Daftar akun di Vercel.com.</li>
+                        <li>Impor proyek dari repositori Git Anda.</li>
+                        <li>Vercel akan otomatis mendeploy website Anda.</li>
+                    </ol>
+                </div>
+
+                <div class="materi-section">
+                    <h3>4. InfinityFree</h3>
+                    <p>InfinityFree adalah salah satu penyedia hosting gratis yang menawarkan dukungan PHP dan MySQL, cocok jika Anda memiliki website yang lebih kompleks (misalnya, WordPress).</p>
+                    <h4>Kelebihan:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Mendukung PHP dan MySQL.</li>
+                        <li><i class="fas fa-check-circle"></i> Subdomain gratis.</li>
+                        <li><i class="fas fa-check-circle"></i> Panel kontrol cPanel.</li>
+                    </ul>
+                    <h4>Kekurangan:</h4>
+                    <ul>
+                        <li><i class="fas fa-times-circle"></i> Mungkin ada iklan di website Anda (tergantung paket).</li>
+                        <li><i class="fas fa-times-circle"></i> Sumber daya terbatas, tidak cocok untuk traffic tinggi.</li>
+                        <li><i class="fas fa-times-circle"></i> Kecepatan mungkin tidak secepat penyedia hosting berbayar.</li>
+                    </ul>
+                    <h4>Cara Menggunakan:</h4>
+                    <ol>
+                        <li>Daftar akun di InfinityFree.net.</li>
+                        <li>Buat akun hosting baru melalui panel kontrol.</li>
+                        <li>Unggah file website Anda menggunakan FTP atau file manager di cPanel.</li>
+                        <li>Konfigurasi database jika diperlukan.</li>
+                    </ol>
+                </div>
+
+                <div class="materi-section">
+                    <h3>Pertimbangan Penting Saat Memilih Hosting Gratis:</h3>
+                    <ul>
+                        <li><i class="fas fa-info-circle"></i> **Batasan Sumber Daya:** Hosting gratis seringkali memiliki batasan pada bandwidth, ruang disk, dan kekuatan CPU.</li>
+                        <li><i class="fas fa-info-circle"></i> **Iklan:** Beberapa penyedia hosting gratis mungkin menampilkan iklan di website Anda.</li>
+                        <li><i class="fas fa-info-circle"></i> **Dukungan Pelanggan:** Dukungan mungkin terbatas atau tidak ada sama sekali.</li>
+                        <li><i class="fas fa-info-circle"></i> **Keandalan:** Uptime dan kecepatan bisa bervariasi.</li>
+                        <li><i class="fas fa-info-circle"></i> **Fitur:** Fitur canggih seperti SSL gratis (selain yang disediakan oleh Netlify/Vercel/GitHub Pages), backup otomatis, atau staging environment mungkin tidak tersedia.</li>
+                    </ul>
+                    <p>Untuk website jasa servis komputer yang Anda buat ini (HTML, CSS, JS murni), **GitHub Pages**, **Netlify**, atau **Vercel** adalah pilihan yang sangat direkomendasikan karena kemudahan penggunaan, kecepatan, dan fitur yang memadai untuk website statis.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ServisKomputer.ID. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
